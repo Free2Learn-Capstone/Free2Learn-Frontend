@@ -30,7 +30,7 @@ jobs:
           script: |
             cd
             rm -rf Free2Learn-Frontend
-            git clone git@github.com:Free2Learn-Capstone/Free2Learn-Frontend.git -b {{ github.ref_name }}
+            git clone git@github.com:Free2Learn-Capstone/Free2Learn-Frontend.git -b ${{ github.ref_name }}
             cd Free2Learn-Frontend
             npm i
             npm run build

@@ -8,6 +8,15 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - run: npm run build
+
       - name: Stop running process if available
         uses: appleboy/ssh-action@v0.1.10
         with:
@@ -20,18 +29,37 @@ jobs:
             pm2 delete next
         continue-on-error: true
 
-      - name: SSH to Deploy
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ vars.HOST }}
-          username: ${{ vars.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ vars.PORT }}
-          script: |
-            cd
-            rm -rf Free2Learn-Frontend
-            git clone git@github.com:Free2Learn-Capstone/Free2Learn-Frontend.git -b ${{ github.ref_name }}
-            cd Free2Learn-Frontend
-            npm i
-            npm run build
-            pm2 start npm --name "next" -- start
+      - run: |
+          pwd
+          ls -ltra
+
+      # - name: Remove old folder
+      #   uses: appleboy/ssh-action@v0.1.10
+      #   with:
+      #     host: ${{ vars.HOST }}
+      #     username: ${{ vars.USERNAME }}
+      #     key: ${{ secrets.KEY }}
+      #     port: ${{ vars.PORT }}
+      #     script: |
+      #       rm -rf Free2Learn-Frontend
+
+      # - name: copy file via ssh key
+      #   uses: appleboy/scp-action@v0.1.4
+      #   with:
+      #     host: ${{ secrets.HOST }}
+      #     username: ${{ secrets.USERNAME }}
+      #     port: ${{ secrets.PORT }}
+      #     key: ${{ secrets.KEY }}
+      #     source: "."
+      #     target: Free2Learn-Frontend
+
+      # - name: Start server
+      #   uses: appleboy/ssh-action@v0.1.10
+      #   with:
+      #     host: ${{ vars.HOST }}
+      #     username: ${{ vars.USERNAME }}
+      #     key: ${{ secrets.KEY }}
+      #     port: ${{ vars.PORT }}
+      #     script: |
+      #       cd Free2Learn-Frontend
+      #       pm2 start npm --name "next" -- start

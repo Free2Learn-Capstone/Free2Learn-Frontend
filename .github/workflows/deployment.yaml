@@ -22,6 +22,5 @@ jobs:
             cd Free2Learn-Frontend
             npm i
             npm run build
-            npm i -g pm2
             pm2 stop next
             pm2 start npm --name "next" -- start

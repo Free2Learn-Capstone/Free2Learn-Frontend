@@ -55,13 +55,13 @@ jobs:
           source: "."
           target: Free2Learn-Frontend
 
-      # - name: Start server
-      #   uses: appleboy/ssh-action@v0.1.10
-      #   with:
-      #     host: ${{ vars.HOST }}
-      #     username: ${{ vars.USERNAME }}
-      #     key: ${{ secrets.KEY }}
-      #     port: ${{ vars.PORT }}
-      #     script: |
-      #       cd Free2Learn-Frontend
-      #       pm2 start npm --name "next" -- start
+      - name: Start server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ vars.PORT }}
+          script: |
+            cd Free2Learn-Frontend
+            pm2 start npm --name "next" -- start

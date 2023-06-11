@@ -8,8 +8,7 @@ jobs:
   deployment:
     runs-on: ubuntu-latest
     steps:
-      # 1. Connect via SSH to EC2 instance
-      - name: Test commands
+      - name: SSH to Deploy
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ vars.HOST }}
@@ -17,8 +16,12 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ vars.PORT }}
           script: |
-            whoami
-            ls -al
-      # 2. Download repo or copy project files
-      # 3. Build next project
-      # 4. Run next project with pm2
+            cd
+            rm -rf Free2Learn-Frontend
+            git clone git@github.com:Free2Learn-Capstone/Free2Learn-Frontend.git
+            cd Free2Learn-Frontend
+            npm i
+            npm run build
+            npm i -g pm2
+            pm2 stop next
+            pm2 start npm --name "next" -- start

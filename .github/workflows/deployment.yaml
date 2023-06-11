@@ -28,6 +28,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ vars.PORT }}
           script: |
+            cd
             rm -rf Free2Learn-Frontend
             git clone git@github.com:Free2Learn-Capstone/Free2Learn-Frontend.git -b {{ github.ref_name }}
             cd Free2Learn-Frontend

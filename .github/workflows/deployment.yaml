@@ -48,9 +48,9 @@ jobs:
       - name: copy file via ssh key
         uses: appleboy/scp-action@v0.1.4
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          port: ${{ secrets.PORT }}
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          port: ${{ vars.PORT }}
           key: ${{ secrets.KEY }}
           source: "."
           target: Free2Learn-Frontend

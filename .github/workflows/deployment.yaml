@@ -1,0 +1,63 @@
+name: Deployment
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - run: npm i
+      
+      - run: npm run build
+
+      - name: Stop running process if available
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ vars.PORT }}
+          script: |
+            pm2 stop next
+            pm2 delete next
+        continue-on-error: true
+
+      - name: Remove old folder
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ vars.PORT }}
+          script: |
+            rm -rf Free2Learn-Frontend
+
+      - name: copy file via ssh key
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          port: ${{ vars.PORT }}
+          key: ${{ secrets.KEY }}
+          source: "."
+          target: Free2Learn-Frontend
+
+      - name: Start server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ vars.HOST }}
+          username: ${{ vars.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ vars.PORT }}
+          script: |
+            cd Free2Learn-Frontend
+            pm2 start npm --name "next" -- start --exp-backoff-restart-delay=1000

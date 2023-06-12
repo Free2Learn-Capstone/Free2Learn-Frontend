@@ -28,7 +28,7 @@ jobs:
           port: ${{ vars.PORT }}
           script: |
             pm2 stop next
-            # pm2 delete next
+            pm2 delete next
         continue-on-error: true
 
       - name: Remove old folder
@@ -60,4 +60,4 @@ jobs:
           port: ${{ vars.PORT }}
           script: |
             cd Free2Learn-Frontend
-            pm2 start npm --name "next" -- start
+            pm2 start npm --name "next" -- start --exp-backoff-restart-delay=1000

@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - 'main'
-      - 'ci-cd'
+
 jobs:
   deployment:
     runs-on: ubuntu-latest
@@ -30,10 +30,6 @@ jobs:
             pm2 stop next
             # pm2 delete next
         continue-on-error: true
-
-      - run: |
-          pwd
-          ls -ltra
 
       - name: Remove old folder
         uses: appleboy/ssh-action@v0.1.10

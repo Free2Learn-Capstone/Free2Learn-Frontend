@@ -1,6 +1,10 @@
-// import Image from 'next/image'
-import MyComponent from '../MyComponent';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyComponent from './components/MyComponent';
 
-export default function Home() {
-  return <MyComponent />;
+export default function Page() {
+  return (
+      <main className={'container'}>
+        <MyComponent />
+      </main>
+  );
 }

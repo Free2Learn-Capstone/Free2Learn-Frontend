@@ -1,0 +1,51 @@
+.footer {
+    background-color: rgb(247, 247, 247);
+    border-radius: 15px;
+    margin-top: 100px;
+    
+    
+
+  }
+  .logo__img{
+    object-fit: cover;
+    
+  }
+  
+  .follows{
+    margin-left: 10px;
+    margin-top: -10px;
+  }
+  
+  .follows span a {
+    text-decoration: none;
+  }
+  
+  .follows span {
+    margin-right: 15px;
+  }
+  
+  .link__list .link__item {
+    background: transparent;
+  }
+  
+  .link__list a {
+    text-decoration: none;
+    color: #224a6f;
+    font-weight: 500;
+  }
+  
+  @media only screen and (max-width: 991px){
+    .footer{
+        text-align: center;
+       
+    }
+    .logo__img{
+        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        
+
+    }
+  }
+  

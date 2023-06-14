@@ -9,8 +9,9 @@ import Features from "./components/Feature-section/Features";
 import FreeCourse from "./components/Free-course-section/FreeCourse";
 import Newsletter from "./components/Newsletter/Newsletter";
 import Footer from "./components/Footer/Footer";
+import {Metadata} from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Free2Learn',
   description: 'Free2Learn',
 };
@@ -26,7 +27,6 @@ export default async function Page() {
         <FreeCourse/>
         <Newsletter/>
         <Footer/>
-      
       </div>
   );
 }

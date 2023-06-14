@@ -1,12 +1,11 @@
 "use client";
+
 import React from "react";
 import "./newsletter.css";
-
 
 const Newsletter = () => {
   return (
     <section className="newsletter">
-      
         <div className="row">
           <div className="col col-lg-12 col-md-12 text-center">
             <h2 className="mb-4">Subscribe Our Newsletter</h2>
@@ -16,7 +15,6 @@ const Newsletter = () => {
             </div>
           </div>
         </div>
-      
     </section>
   );
 };

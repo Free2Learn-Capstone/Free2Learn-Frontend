@@ -1,12 +1,11 @@
 "use client";
+
 import React from "react";
-
-
 import courseImg1 from "../../assests/web-develop.png";
 import courseImg2 from "../../assests/graphics-design.png";
 import courseImg3 from "../../assests/ui-ux.png";
-import "./courses.css";
 import CourseCard from "./CourseCard";
+import "./courses.css";
 
 const coursesData = [
   {
@@ -66,7 +65,6 @@ const coursesData = [
 const Courses = () => {
   return (
     <section className="pop_course">
-      
         <div className="row">
           <div className="col col-lg-12 col-md-12">
             <div className="course__top d-flex justify-content-between align-items-center">
@@ -78,19 +76,17 @@ const Courses = () => {
                   voluptatem recusandae reprehenderit!
                 </p>
               </div>
-
               <div className="w-50 text-end">
                 <button className="btn">See All</button>
               </div>
             </div>
           </div>
           {coursesData.map((item) => (
-            < div className="col col-lg-4 col-md-12 ">
+            <div className="col col-lg-4 col-md-12 ">
               <CourseCard key={item.id} item={item} />
             </div>
           ))}
         </div>
-      
     </section>
   );
 };

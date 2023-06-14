@@ -1,13 +1,11 @@
 "use client";
+
 import React from "react";
-
-
 import courseImg01 from "../../assests/web-development.png";
 import courseImg02 from "../../assests/kids-learning.png";
 import courseImg03 from "../../assests/seo.png";
 import courseImg04 from "../../assests/ui-ux.png";
 import FreeCourseCard from "./FreeCourseCard";
-
 import "./free-course.css";
 
 const freeCourseData = [
@@ -76,19 +74,16 @@ const freeCourseData = [
 const FreeCourse = () => {
   return (
     <section className="free_class">
-      
         <div className="row">
           <div className="col col-lg-12 col-md-12 text-center mb-5">
             <h2 className="fw-bold">Our Free Classes</h2>
           </div>
-
           {freeCourseData.map((item) => (
             <div className="col col-lg-3 col-md-12 mb-5" key={item.id}>
               <FreeCourseCard item={item} />
             </div>
           ))}
         </div>
-      
     </section>
   );
 };

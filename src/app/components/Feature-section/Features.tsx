@@ -1,6 +1,6 @@
 "use client";
-import React from "react";
 
+import React from "react";
 import "./features.css";
 
 const FeatureData = [
@@ -26,7 +26,6 @@ const FeatureData = [
 const Features = () => {
   return (
     <section>
-      
         <div className="row">
           {FeatureData.map((item, index) => (
             <div className="col col-lg-4 col-md-12" key={index}>
@@ -40,7 +39,6 @@ const Features = () => {
             </div>
           ))}
         </div>
-      
     </section>
   );
 };

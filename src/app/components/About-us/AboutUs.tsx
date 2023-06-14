@@ -5,7 +5,7 @@ import "./about.css";
 import CountUp from "react-countup";
 import Image from "next/image";
 
-import aboutImg from "../../assests/about-us.png";
+import aboutImg from "@app/assets/about-us.png";
 
 const AboutUs = () => {
   return (

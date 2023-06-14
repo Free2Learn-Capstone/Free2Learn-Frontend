@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import heroImg from "../../assests/hero-img1.png";
+import heroImg from "@app/assets/hero-img1.png";
 import "./hero-section.css";
 
 const HeroSection = () => {

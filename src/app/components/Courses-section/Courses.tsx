@@ -1,9 +1,9 @@
 "use client";
 
 import React from "react";
-import courseImg1 from "../../assests/web-develop.png";
-import courseImg2 from "../../assests/graphics-design.png";
-import courseImg3 from "../../assests/ui-ux.png";
+import courseImg1 from "@app/assets/web-develop.png";
+import courseImg2 from "@app/assets/graphics-design.png";
+import courseImg3 from "@app/assets/ui-ux.png";
 import CourseCard from "./CourseCard";
 import "./courses.css";
 

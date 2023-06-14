@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Image from "next/image";
-import logoImg from "../../assests/logo.png";
+import logoImg from "@assets/logo.png";
 
 import './header.css';
 

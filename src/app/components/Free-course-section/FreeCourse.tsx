@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import courseImg01 from "../../assests/web-development.png";
-import courseImg02 from "../../assests/kids-learning.png";
-import courseImg03 from "../../assests/seo.png";
-import courseImg04 from "../../assests/ui-ux.png";
+import courseImg01 from "@app/assets/web-development.png";
+import courseImg02 from "@app/assets/kids-learning.png";
+import courseImg03 from "@app/assets/seo.png";
+import courseImg04 from "@app/assets/ui-ux.png";
 import FreeCourseCard from "./FreeCourseCard";
 import "./free-course.css";
 

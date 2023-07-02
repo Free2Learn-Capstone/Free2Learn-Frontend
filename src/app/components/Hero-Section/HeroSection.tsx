@@ -4,6 +4,7 @@ import React from "react";
 import Image from "next/image";
 import heroImg from "@app/assets/hero-img1.png";
 import "./hero-section.css";
+import Link from 'next/link';
 
 const HeroSection = () => {
   return (
@@ -22,7 +23,7 @@ const HeroSection = () => {
                     </div>
                     <div className="search">
                     <input type="text" placeholder="Find a course" />
-                    <button className="btn">Search</button>
+                    <Link href="/search"><button className="btn">Search</button></Link>
                 </div>
             </div>
             <div className="col col-lg-6 col-md-12">

@@ -1,3 +1,4 @@
+/*
 .counter {
     font-size: 2rem;
     font-weight: 600;
@@ -21,5 +22,87 @@
   
   .about__content h2 {
     font-weight: 600;
-  }
+  } */
   
+  /* about.css */
+
+.about-section {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.about__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__img img {
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+}
+
+.about__content {
+  padding: 20px;
+}
+.about__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about__subheading {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.brand-name {
+  color: #224a6f;
+}
+
+.about__intro {
+  font-size: 20px;
+  font-weight: bold;
+  color: #224a6f;
+  margin-bottom: 10px;
+}
+
+.about__content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-md-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-lg-6,
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+}

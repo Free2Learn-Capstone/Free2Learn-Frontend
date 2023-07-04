@@ -9,11 +9,11 @@ import "./footer.css";
 const footerQuickLinks = [
   {
     display: "Home",
-    url: "#",
+    url: "/",
   },
   {
     display: "About US",
-    url: "#",
+    url: "/about-us",
   },
 
   {
@@ -30,7 +30,7 @@ const footerQuickLinks = [
 const footerInfoLinks = [
   {
     display: "Privacy Policy",
-    url: "/components/Privacy-policy",
+    url: "/privacy-policy",
   },
   {
     display: "Membership",

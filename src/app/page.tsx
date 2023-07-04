@@ -21,7 +21,6 @@ export default async function Page() {
       <div className='container'>
         <Header />
         <HeroSection/>
-        <AboutUs/>
         <Courses/>
         <Features/>
         <FreeCourse/>

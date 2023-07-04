@@ -1,40 +1,59 @@
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 28px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
-  
-  p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  ul {
-    margin-bottom: 10px;
-    padding-left: 20px;
-  }
-  
-  li {
-    margin-bottom: 5px;
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
-  
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+.privacy-policy-container {
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.privacy-policy-title {
+  font-size: 36px;
+  color: #224a6f;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.privacy-policy-description {
+  font-size: 18px;
+  text-align: justify;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.privacy-policy-section {
+  font-size: 24px;
+  color: #224a6f;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-subtitle {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-list {
+  font-size: 16px;
+  color: #666;
+  list-style: disc;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+.privacy-policy-list li a {
+  color: #224a6f;
+  text-decoration: none;
+}
+
+.privacy-policy-list li a:hover {
+  text-decoration: underline;
+}
+
+.privacy-policy-contact {
+  font-size: 18px;
+  color: #555;
+  margin-top: 30px;
+}
+

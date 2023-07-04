@@ -37,7 +37,7 @@ const footerInfoLinks = [
   },
   {
     display: "Terms of Service",
-    url: "#",
+    url: "/terms-of-service",
   },
 ];
 

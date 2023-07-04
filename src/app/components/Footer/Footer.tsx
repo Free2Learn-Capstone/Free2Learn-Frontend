@@ -5,6 +5,7 @@ import Image from "next/image";
 import logoImg from "@assets/logo.png";
 import "./footer.css";
 
+
 const footerQuickLinks = [
   {
     display: "Home",
@@ -29,7 +30,7 @@ const footerQuickLinks = [
 const footerInfoLinks = [
   {
     display: "Privacy Policy",
-    url: "#",
+    url: "/PrivacyPolicyPage",
   },
   {
     display: "Membership",

@@ -8,7 +8,7 @@ import courseImg04 from "@app/assets/ui-ux.png";
 import FreeCourseCard from "./FreeCourseCard";
 import "./free-course.css";
 
-const freeCourseData = [
+export const freeCourseData = [
   {
     id: "01",
     title: "Basic Web Development Course",

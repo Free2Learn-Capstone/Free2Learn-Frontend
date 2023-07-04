@@ -4,11 +4,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Header from "@components/Header/Header";
 import Link from 'next/link';
-import "bootstrap/dist/css/bootstrap.min.css";
+import "@app/index.css";
+import "remixicon/fonts/remixicon.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './login.css';
 import Footer from "@components/Footer/Footer";
 
-const LoginComponent: React.FC = () => {
+
+export default function Login() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data: any) => {
@@ -69,5 +72,4 @@ const LoginComponent: React.FC = () => {
   );
 };
 
-export default LoginComponent;
 

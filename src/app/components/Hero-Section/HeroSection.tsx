@@ -23,7 +23,7 @@ const HeroSection = () => {
                     </div>
                     <div className="search">
                     <input type="text" placeholder="Find a course" />
-                    <Link href="/search"><button className="btn">Search</button></Link>
+                    <Link href="/courses"><button className="btn">Search</button></Link>
                 </div>
             </div>
             <div className="col col-lg-6 col-md-12">

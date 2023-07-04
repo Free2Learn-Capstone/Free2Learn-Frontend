@@ -7,11 +7,14 @@ import Header from "@components/Header/Header";
 import { USER_TYPES } from "@/app/helpers/enums";
 
 import Link from 'next/link';
-import "bootstrap/dist/css/bootstrap.min.css";
+import "@app/index.css";
+import "remixicon/fonts/remixicon.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './signup.css';
 import Footer from "@components/Footer/Footer";
 
-const SignupComponent: React.FC = () => {
+
+export default function Signup() {
   const { control, register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = async (data: any) => {
@@ -146,5 +149,4 @@ const SignupComponent: React.FC = () => {
   );
 };
 
-export default SignupComponent;
 

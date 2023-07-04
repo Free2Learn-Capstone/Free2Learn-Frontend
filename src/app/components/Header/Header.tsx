@@ -17,7 +17,7 @@ const navLinks = [
   },
   {
     display: "Courses",
-    url: "/search",
+    url: "/courses",
   },
   {
     display: "Login",

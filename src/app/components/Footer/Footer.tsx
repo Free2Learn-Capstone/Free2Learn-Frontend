@@ -30,7 +30,7 @@ const footerQuickLinks = [
 const footerInfoLinks = [
   {
     display: "Privacy Policy",
-    url: "/PrivacyPolicyPage",
+    url: "/components/Privacy-policy",
   },
   {
     display: "Membership",

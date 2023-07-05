@@ -50,6 +50,19 @@
   display: none;
 }
 
+.log-in{
+  background-color:white !important;
+  color: #224a6f !important;
+  font-weight: bolder;
+  border: 2px solid #224a6f;
+}
+
+.log-in:hover{
+  background: #17bf9e !important;
+  color: white !important;
+}
+
+
 @media only screen and (max-width: 991px) {
   .nav__menu {
     position: fixed;
@@ -79,10 +92,11 @@
   .mobile__menu {
     display: block;
   }
+  /*
   .nav__right {
     display: none;
   }
-
+  */
   .active__menu {
     display: block;
   }

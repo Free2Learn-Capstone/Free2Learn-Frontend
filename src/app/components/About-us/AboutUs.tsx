@@ -21,10 +21,14 @@ const AboutUs = () => {
             <div className="about__content">
               <h2>About Us</h2>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Excepturi cupiditate animi deserunt libero nesciunt corporis
-                explicabo nobis ex quo molestiae!
+              At Free2Learn, we believe that education should be accessible to all. 
+              Our mission is to empower individuals with knowledge and skills through our comprehensive e-learning platform. 
+              With a diverse range of courses, expert instructors, and a user-friendly interface, 
+              we're committed to making learning enjoyable and cost-free for everyone. 
+              Join our community today and unlock your limitless potential with Free2Learn - where knowledge knows no limits!
               </p>
+              <button className="btn">Learn More</button>
+              {/*
               <div className="about__counter">
                 <div className=" d-flex gap-5 align-items-center">
                   <div className="single__counter">
@@ -58,6 +62,7 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
+  */}
             </div>
           </div>
         </div>

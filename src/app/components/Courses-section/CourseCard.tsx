@@ -2,8 +2,8 @@
 import React from "react";
 import Image from "next/image";
 
-const CourseCard = (props: { item: { imgUrl: any; title: any; lesson: any; students: any; rating: any; }; }) => {
-  const { imgUrl, title, lesson, students, rating } = props.item;
+const CourseCard = (props: { item: { imgUrl: any; title: any; lesson: any; }; }) => {
+  const { imgUrl, title, lesson } = props.item;
 
   return (
     <div className="single__course__item">
@@ -18,21 +18,24 @@ const CourseCard = (props: { item: { imgUrl: any; title: any; lesson: any; stude
           <p className="lesson d-flex align-items-center gap-1">
             <i className="ri-book-open-line"></i> {lesson} Lessons
           </p>
-
-          <p className="students d-flex align-items-center gap-1">
-            <i className="ri-user-line"></i> {students}K
+          <p className="enroll d-flex align-items-center gap-1">
+            <a href="#"> Enroll Now</a>
           </p>
-        </div>
 
+          
+        </div>
+        {/*
         <div className=" d-flex justify-content-between align-items-center">
           <p className="rating d-flex align-items-center gap-1">
             <i className="ri-star-fill"></i> {rating}K
           </p>
 
-          <p className="enroll d-flex align-items-center gap-1">
-            <a href="#"> Enroll Now</a>
+          <p className="students d-flex align-items-center gap-1">
+            <i className="ri-user-line"></i> {students}K
           </p>
         </div>
+        */}
+        
       </div>
     </div>
   );

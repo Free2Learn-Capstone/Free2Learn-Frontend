@@ -18,12 +18,9 @@ const footerQuickLinks = [
   {
     display: "Courses",
     url: "#",
-  },
+  }
 
-  {
-    display: "Blog",
-    url: "#",
-  },
+  
 ];
 
 const footerInfoLinks = [
@@ -49,6 +46,7 @@ const Footer = () => {
             <h2 className=" d-flex align-items-center gap-1">
               <Image src={logoImg} alt="" className="logo__img" height={140} width={220} />
             </h2>
+            {/*
             <div className="follows">
               <p className="mb-0">Follow us on social media</p>
               <span>
@@ -76,6 +74,7 @@ const Footer = () => {
                 </a>
               </span>
             </div>
+            */}
           </div>
           <div className="col col-lg-3 col-md-12 mb-4">
             <h6 className="fw-bold">Explore</h6>

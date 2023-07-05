@@ -7,7 +7,7 @@ import AboutUs from "./components/About-us/AboutUs";
 import Courses from "./components/Courses-section/Courses";
 import Features from "./components/Feature-section/Features";
 import FreeCourse from "./components/Free-course-section/FreeCourse";
-import Newsletter from "./components/Newsletter/Newsletter";
+
 import Footer from "./components/Footer/Footer";
 import {Metadata} from "next";
 
@@ -25,7 +25,7 @@ export default async function Page() {
         <Courses/>
         <Features/>
         <FreeCourse/>
-        <Newsletter/>
+        
         <Footer/>
       </div>
   );

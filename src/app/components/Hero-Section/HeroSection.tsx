@@ -12,12 +12,11 @@ const HeroSection = () => {
             <div className="col col-lg-6 col-md-12 ">
                 <div className="hero__content">
                     <h2 className="mb-4 hero__title">
-                        Lorem ipsum <br /> amet consectetur <br /> deserunt id iste
+                        Grow, Learn <br /> & Build <br /> Your Career
                     </h2>
-                    <p className="mb-5">
-                        Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-                        Aut saepe voluptatum earum delectus <br /> deserunt id iste,
-                        quas officiis et repellat!
+                    <p className="mb-5"> 
+                        
+                        An open education platform <br />  for those who dream <strong>Big</strong> <br /> and wants to achieve even <strong>Bigger</strong>
                     </p>
                     </div>
                     <div className="search">

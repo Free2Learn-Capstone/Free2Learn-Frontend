@@ -18,11 +18,8 @@ const navLinks = [
   {
     display: "Courses",
     url: "#",
-  },
-  {
-    display: "Blog",
-    url: "#",
-  },
+  }
+  
 ];
 
 const Header = () => {
@@ -50,7 +47,8 @@ const Header = () => {
 
             <div className="nav__right">
               <p className="mb-0 d-flex align-items-center gap-2">
-                <i className="ri-phone-line"></i> +1 (800) 800-8000
+                <button className="btn log-in">Log in</button>
+                <button className="btn sign-up">Sign up</button>
               </p>
             </div>
           </div>

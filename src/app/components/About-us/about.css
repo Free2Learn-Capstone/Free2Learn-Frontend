@@ -16,6 +16,7 @@
   
   .about__img img {
     border-radius: 15px;
+    height: 400px;
     object-fit: cover;
   }
   

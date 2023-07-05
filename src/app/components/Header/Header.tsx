@@ -17,12 +17,13 @@ const navLinks = [
   },
   {
     display: "Courses",
-    url: "#",
+    url: "/courses",
   },
   {
-    display: "Blog",
-    url: "#",
+    display: "Login",
+    url: "/login",
   },
+
 ];
 
 const Header = () => {

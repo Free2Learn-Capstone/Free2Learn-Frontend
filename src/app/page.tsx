@@ -1,6 +1,5 @@
-import "./index.css";
-import "remixicon/fonts/remixicon.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+<<<<<<< HEAD
 import Header from "./components/Header/Header";
 import HeroSection from "./components/Hero-Section/HeroSection";
 import AboutUs from "./components/About-us/AboutUs";
@@ -10,14 +9,13 @@ import FreeCourse from "./components/Free-course-section/FreeCourse";
 
 import Footer from "./components/Footer/Footer";
 import {Metadata} from "next";
+=======
+import MyComponent from './components/MyComponent';
+>>>>>>> main
 
-export const metadata: Metadata = {
-  title: 'Free2Learn',
-  description: 'Free2Learn',
-};
-
-export default async function Page() {
+export default function Page() {
   return (
+<<<<<<< HEAD
       <div className='container'>
         <Header />
         <HeroSection/>
@@ -28,5 +26,10 @@ export default async function Page() {
         
         <Footer/>
       </div>
+=======
+      <main className={'container'}>
+        <MyComponent />
+      </main>
+>>>>>>> main
   );
 }

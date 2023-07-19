@@ -1,7 +1,7 @@
 const ROLES = {
-    SuperAdmin: ['admin'],
-    Volunteer: ['volunteer'],
-    Student: ['student'],
+    SUPER_ADMIN: ['SUPER_ADMIN'],
+    VOLUNTEER: ['VOLUNTEER'],
+    STUDENT: ['STUDENT'],
   };
   
   module.exports = ROLES;

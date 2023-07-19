@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = 'xxxxxxxxxx'; 
+const SECRET_KEY = ''; 
 
 const verifyTokenAndGetRole = (token) => {
   try {

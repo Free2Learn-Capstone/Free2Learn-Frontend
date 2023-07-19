@@ -27,9 +27,9 @@ const navLinks = [
 ];
 
 const Header = () => {
-  const menuRef = useRef();
+  const menuRef = useRef<HTMLDivElement>(null); 
 
-  const menuToggle = () => menuRef.current.classList.toggle("active__menu");
+  const menuToggle = () => menuRef.current?.classList.toggle("active__menu");
 
   return (
     <header className="header">

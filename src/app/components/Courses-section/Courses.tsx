@@ -81,8 +81,8 @@ const Courses = () => {
               </div>
             </div>
           </div>
-          {coursesData.map((item) => (
-            <div className="col col-lg-4 col-md-12 ">
+          {coursesData.map((item, index) => (
+            <div key={index} className="col col-lg-4 col-md-12 ">
               <CourseCard key={item.id} item={item} />
             </div>
           ))}

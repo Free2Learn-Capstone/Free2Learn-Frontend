@@ -1,4 +1,4 @@
-/*
+
 export const metadata = {
   title: 'ADMIN',
   description: 'Admin',
@@ -10,34 +10,34 @@ export default async function Page() {
         <h1>ADMIN</h1>
       </section>
   );
-} */
+}
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { verifyTokenAndGetRole } from '@/utils/auth';
-import ROLES from '@/config/roles';
+// import { useEffect } from 'react';
+// import { useRouter } from 'next/router';
+// import { verifyTokenAndGetRole } from '@/utils/auth';
+// import ROLES from '@/config/roles';
 
-const Page = () => {
-  const router = useRouter();
+// const Page = () => {
+//   const router = useRouter();
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
+//   useEffect(() => {
+//     const token = localStorage.getItem('token');
 
-    if (!token) {
-      router.push('/login');
-      return;
-    }
+//     if (!token) {
+//       router.push('/login');
+//       return;
+//     }
 
-    const userRole = verifyTokenAndGetRole(token);
+//     const userRole = verifyTokenAndGetRole(token);
 
-    if (!userRole || !ROLES.SuperAdmin.includes(userRole)) {
-      router.push('/unauthorized');
-    }
-  }, []);
+//     if (!userRole || !ROLES.SuperAdmin.includes(userRole)) {
+//       router.push('/unauthorized');
+//     }
+//   }, []);
 
-  return <div>Admin Page</div>;
-};
+//   return <div>Admin Page</div>;
+// };
 
-export default Page;
+// export default Page;
 
 

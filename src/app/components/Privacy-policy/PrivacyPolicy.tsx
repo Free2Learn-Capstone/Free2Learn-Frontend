@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
     <div className="privacy-policy-container">
       <h1 className="privacy-policy-title">Privacy Policy</h1>
       <p className="privacy-policy-description">
-        Welcome to Free2Learn's privacy policy. This document outlines how we
+        Welcome to Free2Learn&apos;s privacy policy. This document outlines how we
         collect, use, and protect any information you provide when using our
         esteemed online class platform.
       </p>
@@ -123,7 +123,7 @@ const PrivacyPolicy = () => {
           information.
         </li>
       </ul>
-      <h2 className="privacy-policy-section">Children's Privacy</h2>
+      <h2 className="privacy-policy-section">Children&apos;s Privacy</h2>
       <p className="privacy-policy-subtitle">
         Free2Learn does not knowingly collect personal information from children
         under the age of 13. If we become aware that we have collected personal

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react'
 
 type Props = {}
@@ -8,7 +9,7 @@ function CourseListingCard(props : any) {
   return (
     <div className="col">
       <div className="card shadow-sm">
-        <img src={`https://source.unsplash.com/random/800x600?sig=${index}`} />
+        <Image src={`https://source.unsplash.com/random/800x600?sig=${index}`} alt='course'/>
         <div className="card-body">
           <p className="card-text">
            {course.title}

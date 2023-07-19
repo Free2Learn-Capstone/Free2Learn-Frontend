@@ -18,7 +18,7 @@ export default function page({}: Props) {
             <h1 className="text-center mb-4 mt-4">Terms of service</h1>
 
             <p className="text-center">
-              Welcome to FREE2LEARN! These Terms of Service ("Terms") govern
+              Welcome to FREE2LEARN! These Terms of Service (&quot;Terms&quot;) govern
               your use of FREE2LEARN website, its services, and any content or
               materials available through FREE2LEARN. By accessing or using
               FREE2LEARN, you agree to comply with these Terms. If you do not
@@ -46,8 +46,8 @@ export default function page({}: Props) {
 
             <p className="text-center">
               1.3 User Content: FREE2LEARN allows users to contribute content,
-              including questions, answers, comments, and other materials ("User
-              Content"). By submitting User Content, you grant us a worldwide,
+              including questions, answers, comments, and other materials (&quot;User
+              Content&quot;). By submitting User Content, you grant us a worldwide,
               non-exclusive, royalty-free, perpetual, irrevocable, and
               sublicensable right to use, reproduce, modify, adapt, publish,
               translate, distribute, publicly perform, and display the User
@@ -67,7 +67,7 @@ export default function page({}: Props) {
             <p className="text-center">
               c. Post or transmit any content that is unlawful, harmful,
               threatening, abusive, harassing, defamatory, vulgar, obscene,
-              libelous, invasive of another's privacy, or otherwise
+              libelous, invasive of another&apos;s privacy, or otherwise
               objectionable;
             </p>
             <p className="text-center">
@@ -75,7 +75,7 @@ export default function page({}: Props) {
               proper functioning of FREE2LEARN;
             </p>
             <p className="text-center">
-              e. Attempt to gain unauthorized access to FREE2LEARN's systems or
+              e. Attempt to gain unauthorized access to FREE2LEARN&apos;s systems or
               networks;
             </p>
             <p className="text-center">
@@ -111,7 +111,7 @@ export default function page({}: Props) {
             <p className="text-center">3. Disclaimer of Warranties</p>
 
             <p className="text-center">
-              FREE2LEARN is provided on an "as is" and "as available" basis
+              FREE2LEARN is provided on an &quot;as is&quot; and &quot;as available&quot; basis
               without warranties of any kind, either express or implied. We do
               not warrant that FREE2LEARN will be uninterrupted, error-free, or
               free from viruses or other harmful components. We disclaim all
@@ -138,7 +138,7 @@ export default function page({}: Props) {
               You agree to indemnify and hold FREE2LEARN and its owners,
               directors, employees, and agents harmless from any claims, losses,
               damages, liabilities, and expenses, including reasonable
-              attorneys' fees, arising out of or in connection with your use of
+              attorneys&apos; fees, arising out of or in connection with your use of
               FREE2LEARN or your violation of these Terms.
             </p>
 

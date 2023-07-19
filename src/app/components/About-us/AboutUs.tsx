@@ -67,14 +67,14 @@ const AboutUs = () => {
               desire to enrich lives, consider becoming a volunteer instructor
               on our platform. By sharing your expertise, you can make a
               profound impact on the lives of learners across the globe. If
-              you're eager to embark on a journey of continuous learning,
+              you&apos;re eager to embark on a journey of continuous learning,
               explore our vast course catalog encompassing a wide range of
               subjects. Enroll in classes that align with your interests and
               aspirations, and let the quest for knowledge ignite your
               potential. Join our thriving community of visionaries, learners,
               and educators. Experience the joy of mutual growth and discovery
               as we collectively illuminate the path of knowledge and
-              enlightenment. Together, let's redefine education, making it a
+              enlightenment. Together, let&apos;s redefine education, making it a
               beacon of hope and empowerment for all. Unleash your potential
               with Free2Learn and let the world become your limitless classroom.
               <span className="brand-name">Unlock your mind</span>,{" "}

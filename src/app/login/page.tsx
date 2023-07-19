@@ -37,21 +37,6 @@ export default function Login() {
       router.push('/courses');
     }
   };
-
-  useEffect(() => {
-    // Check if the user is already authenticated
-    const token = localStorage.getItem("token");
-    console.log("hola"+token)
-    if (token) {
-      // Extract the role from the token and redirect based on role
-      const userRole = verifyTokenAndGetRole(token);
-      console.log(userRole);
-
-      if (userRole) {
-        redirectBasedOnRole(userRole);
-      }
-    }
-  }, [router]);
   
   const onSubmit = async (data: FormData) => {
     // Login api
@@ -60,14 +45,15 @@ export default function Login() {
         "//localhost:3000/api/v1/auth/login",
         data
       );
-      // console.log(response.data);
-      if (response.data.data.accessToken) {
-        
+      const token = response.data.data.accessToken;
+      if (token) {
+        const userRole = verifyTokenAndGetRole(token);
+        console.log(userRole)
         console.log("Login successful!");
-    
-        redirectBasedOnRole(response.data.data.role);
-        // console.log(redirectBasedOnRole(response.data.data.role));
 
+        if (userRole) {
+          redirectBasedOnRole(userRole);
+        }
 
       } else {
         console.log("Login failed:", response.data.message);

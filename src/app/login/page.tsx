@@ -30,11 +30,13 @@ export default function Login() {
 
   const redirectBasedOnRole = (role: string) => {
     if (role === 'SUPER_ADMIN') {
-      router.push('/about-us');
-    } else if (role === 'volunteer') {
+      router.push('/admin');
+    } else if (role === 'VOLUNTEER') {
       router.push('/volunteer');
+    } else if (role === 'STUDENT') {
+      router.push('/student');
     } else {
-      router.push('/courses');
+      router.push('/');
     }
   };
   

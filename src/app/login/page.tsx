@@ -28,8 +28,6 @@ export default function Login() {
 
   const router = useRouter();
 
-  const { BACKEND_URL }= process.env;
-
   const redirectBasedOnRole = (role: string) => {
     if (role === 'SUPER_ADMIN') {
       router.push('/admin');
@@ -44,6 +42,7 @@ export default function Login() {
   
   const onSubmit = async (data: FormData) => {
     // Login api
+    const BACKEND_URL = process.env.BACKEND_URL;
     try {
       const response = await axios.post(
         `//${BACKEND_URL}/api/v1/auth/login`,

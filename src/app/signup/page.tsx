@@ -13,9 +13,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './signup.css';
 import Footer from "@components/Footer/Footer";
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  email: string;
+  password: string;
+  type: string;
+}
 
 export default function Signup() {
-  const { control, register, handleSubmit, formState: { errors } } = useForm();
+  const { control, register, handleSubmit, formState: { errors } } = useForm<FormData>();
 
   const onSubmit = async (data: any) => {
 

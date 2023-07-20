@@ -1,10 +1,10 @@
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = process.env.JWT_SECRET_KEY; 
+const { JWT_SECRET_KEY } = process.env; 
 
 const verifyTokenAndGetRole = (token) => {
   try {
-    const decoded = jwt.verify(token, SECRET_KEY);
+    const decoded = jwt.verify(token, JWT_SECRET_KEY);
     return decoded.role;
   } catch (error) {
     console.error(error)

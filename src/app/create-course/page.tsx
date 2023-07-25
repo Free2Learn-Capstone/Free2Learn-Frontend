@@ -23,8 +23,8 @@ export default function Signup() {
   } = useForm();
   const router = useRouter();
 
-  const user = window.localStorage.getItem("user") as string
-    ? JSON.parse(window.localStorage.getItem("user") as string)
+  const savedUser = typeof window !== 'undefined'&& window.localStorage.getItem("user") as string
+   const user = savedUser ? JSON.parse(savedUser)
     : null; 
 
     console.log(user)

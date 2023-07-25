@@ -49,9 +49,10 @@ export const createCourse = async (courseData) => {
     throw new Error('Failed to create course');
   }
 };
-
-export const getCourses = async (_, { name }) => {
-  const url = name ? `${baseURL}/${Queries.GET_COURSE}?name=${name}` : `${baseURL}/${Queries.CREATE_COURSES}`;
+export const getCourses = async (_, query) => {
+  const { name = null } = query || {};
+  const url = name ? `${baseURL}/${Queries.GET_COURSE}?name=${name}` : `${baseURL}/${Queries.GET_COURSES}`;
+  console.log(url)
   try {
     const response = await fetch(url, {
       method: "GET",

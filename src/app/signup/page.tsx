@@ -6,13 +6,15 @@ import Header from "@components/Header/Header";
 
 import { USER_TYPES } from "@/app/helpers/enums";
 
-import Link from 'next/link';
+import Link from "next/link";
 import "@app/index.css";
 import "remixicon/fonts/remixicon.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './signup.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./signup.css";
 import Footer from "@components/Footer/Footer";
-
+import { useMutationWithHandlers } from "@app/helpers/genericHelpers";
+import { createUser } from "@/store/http/apiReactQuery";
+import { FacebookLogo, GoogleLogo } from './socialLoginLogos';
 interface FormData {
   firstName: string;
   lastName: string;
@@ -22,12 +24,24 @@ interface FormData {
 }
 
 export default function Signup() {
-  const { control, register, handleSubmit, formState: { errors } } = useForm<FormData>();
+  const {
+    control,
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormData>();
+
+  const useCreateUser = useMutationWithHandlers(createUser);
+  const { mutate } = useCreateUser({});
 
   const onSubmit = async (data: any) => {
-
-    // Login api
-    console.log(data, 'data')
+    const { email, password, type: role } = data;
+    const result = await mutate({
+      email,
+      password,
+      role,
+    });
+    console.log(result, "result");
   };
 
   return (
@@ -37,7 +51,7 @@ export default function Signup() {
         <main className="form-signin w-100 m-auto">
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1 className="h3 mb-3 fw-normal">Sign up</h1>
-         <div className="form-floating my-2">
+            <div className="form-floating my-2">
               <input
                 type="firstName"
                 className={`form-control ${
@@ -56,7 +70,7 @@ export default function Signup() {
                 </div>
               )}
             </div>
-         <div className="form-floating my-2">
+            <div className="form-floating my-2">
               <input
                 type="lastName"
                 className={`form-control ${
@@ -75,10 +89,12 @@ export default function Signup() {
                 </div>
               )}
             </div>
-         <div className="form-floating my-2">
+            <div className="form-floating my-2">
               <input
                 type="email"
-                className={`form-control  rounded-2 ${errors.email ? "is-invalid" : ""}`}
+                className={`form-control  rounded-2 ${
+                  errors.email ? "is-invalid" : ""
+                }`}
                 id="email"
                 placeholder="name@example.com"
                 {...register("email", {
@@ -122,7 +138,7 @@ export default function Signup() {
                 name="type"
                 control={control}
                 render={({ field }) => (
-                  <select className="form-select my-2"  {...field}>
+                  <select className="form-select my-2" {...field}>
                     {[
                       { value: USER_TYPES.STUDENT, label: "Student" },
                       { value: USER_TYPES.VOLUNTEER, label: "Volunteer" },
@@ -145,15 +161,36 @@ export default function Signup() {
             >
               Signup
             </button>
+            <div className="separator">or</div>
+            <div className="socialLoginsContainer">
+              <button
+                className="socialLoginButtons"
+                type="button"
+                onClick={() => {
+                  window.location.href =
+                    "http://localhost:3100/api/v1/auth/google/login";
+                }}
+              >
+                {GoogleLogo} Signup with Google
+              </button>
+              <button
+                className="socialLoginButtons"
+                type="button"
+                onClick={() => {
+                  window.location.href =
+                    "http://localhost:3100/api/v1/auth/facebook/login";
+                }}
+              >
+                {FacebookLogo} Signup with Facebook
+              </button>
+            </div>
             <p className="mt-5 mb-3 text-body-secondary">
               Already a member? <Link href="/login">Login</Link>
             </p>
           </form>
         </main>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
-};
-
-
+}

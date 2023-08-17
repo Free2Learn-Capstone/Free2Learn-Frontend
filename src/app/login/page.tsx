@@ -8,11 +8,10 @@ import "@app/index.css";
 import "remixicon/fonts/remixicon.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./login.css";
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import Footer from "@components/Footer/Footer";
 import { verifyTokenAndGetRole } from "@/utils/auth";
-
 
 interface FormData {
   email: string;
@@ -29,17 +28,17 @@ export default function Login() {
   const router = useRouter();
 
   const redirectBasedOnRole = (role: string) => {
-    if (role === 'SUPER_ADMIN') {
-      router.push('/admin');
-    } else if (role === 'VOLUNTEER') {
-      router.push('/volunteer');
-    } else if (role === 'STUDENT') {
-      router.push('/student');
+    if (role === "SUPER_ADMIN") {
+      router.push("/admin");
+    } else if (role === "VOLUNTEER") {
+      router.push("/volunteer");
+    } else if (role === "STUDENT") {
+      router.push("/courses");
     } else {
-      router.push('/');
+      router.push("/");
     }
   };
-  
+
   const onSubmit = async (data: FormData) => {
     // Login api
     const BACKEND_URL = process.env.BACKEND_URL;
@@ -51,13 +50,12 @@ export default function Login() {
       const token = response.data.data.accessToken;
       if (token) {
         const userRole = verifyTokenAndGetRole(token);
-        console.log(userRole)
+        console.log(userRole);
         console.log("Login successful!");
 
         if (userRole) {
           redirectBasedOnRole(userRole);
         }
-
       } else {
         console.log("Login failed:", response.data.message);
       }
@@ -67,8 +65,6 @@ export default function Login() {
 
     // console.log(data, "data");
   };
-
-  
 
   return (
     <div className="container">
@@ -135,4 +131,3 @@ export default function Login() {
     </div>
   );
 }
-

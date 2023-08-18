@@ -11,7 +11,7 @@ const HeroSection = () => {
             <div className="col col-lg-6 col-md-12 ">
                 <div className="hero__content">
                     <h2 className="mb-4 hero__title">
-                        Welcome to <br /> Free2Learn's <br /> Online Education Platform
+                        Welcome to <br /> Free2Learn&apos;s <br /> Online Education Platform
                     </h2>
                     <p className="mb-5">
                         Empower yourself through <br /> accessible and inclusive education. <br /> Join a community dedicated to learning and growth.

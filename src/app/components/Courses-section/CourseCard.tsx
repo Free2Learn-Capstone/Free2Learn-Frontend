@@ -2,7 +2,9 @@
 import React from "react";
 import Image from "next/image";
 
-const CourseCard = (props: { item: { imgUrl: any; title: any; lesson: any; students: any; rating: any; }; }) => {
+const CourseCard = (props: {
+  item: { imgUrl: any; title: any; lesson: any; students: any; rating: any };
+}) => {
   const { imgUrl, title, lesson, students, rating } = props.item;
 
   return (

@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Footer from "@components/Footer/Footer";
 import { freeCourseData } from "../components/Free-course-section/FreeCourse";
 import FreeCourseCard from "../components/Free-course-section/FreeCourseCard";
+import Link from "next/link";
 
 export default function Courses() {
   return (
@@ -19,6 +20,11 @@ export default function Courses() {
             <div className="course__top d-flex justify-content-between align-items-center">
               <div className="course__top__left w-50">
                 <h2 className="fw-bold mb-3">Search Courses</h2>
+              </div>
+              <div className="course__top__left w-50">
+                <Link className="my-courses-link" href="/my-courses">
+                  My courses
+                </Link>
               </div>
             </div>
           </div>

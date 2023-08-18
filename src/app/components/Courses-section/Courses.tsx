@@ -86,8 +86,8 @@ const Courses = () => {
             <div className="course__top__left w-50">
               <h2>Discover Our Popular Courses</h2>
               <p>
-                Embark on a transformative learning journey with Free2Learn's
-                top-rated courses. Whether you're a novice or an expert, our
+                Embark on a transformative learning journey with Free2Learn&apos;s
+                top-rated courses. Whether you&apos;re a novice or an expert, our
                 courses are designed to empower you with practical skills and
                 knowledge to excel in your chosen field.
               </p>

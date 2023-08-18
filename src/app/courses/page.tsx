@@ -22,7 +22,9 @@ export default function Courses() {
                 <h2 className="fw-bold mb-3">Search Courses</h2>
               </div>
               <div className="course__top__left w-50">
-              <Link href="/my-courses">My courses</Link>
+                <Link className="my-courses-link" href="/my-courses">
+                  My courses
+                </Link>
               </div>
             </div>
           </div>

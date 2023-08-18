@@ -14,7 +14,7 @@ const mockEnrolledCourses = [
     date: "2023-08-01",
     time: "10:00 AM - 12:00 PM",
     description: "Advanced mathematics course",
-    meetingLink: "https://example.com/meeting1",
+    meetingLink: "https://us02web.zoom.us/j/8362WMExPZz09&unam20Sarmiento#success",
     registeredPeople: 20,
   },
   {
@@ -25,7 +25,7 @@ const mockEnrolledCourses = [
     date: "2023-08-02",
     time: "3:00 PM - 5:00 PM",
     description: "In-depth history exploration",
-    meetingLink: "https://example.com/meeting2",
+    meetingLink: "https://us02web.zoom.us/j/83SRUdRU3Bianis%2e%20Sarmiento#success",
     registeredPeople: 15,
   },
   {
@@ -36,7 +36,7 @@ const mockEnrolledCourses = [
     date: "2023-08-03",
     time: "9:30 AM - 11:30 AM",
     description: "Introduction to scientific concepts",
-    meetingLink: "https://example.com/meeting3",
+    meetingLink: "https://us02web.zoom.us/j/836246078%20Quispe%20Sarmiento#success",
     registeredPeople: 18,
   },
 ];

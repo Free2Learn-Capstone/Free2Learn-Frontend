@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Image from "next/image";
 import heroImg from "@app/assets/hero-img1.png";
@@ -13,12 +11,10 @@ const HeroSection = () => {
             <div className="col col-lg-6 col-md-12 ">
                 <div className="hero__content">
                     <h2 className="mb-4 hero__title">
-                        Lorem ipsum <br /> amet consectetur <br /> deserunt id iste
+                        Welcome to <br /> Free2Learn's <br /> Online Education Platform
                     </h2>
                     <p className="mb-5">
-                        Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.
-                        Aut saepe voluptatum earum delectus <br /> deserunt id iste,
-                        quas officiis et repellat!
+                        Empower yourself through <br /> accessible and inclusive education. <br /> Join a community dedicated to learning and growth.
                     </p>
                     </div>
                     <div className="search">
@@ -27,7 +23,7 @@ const HeroSection = () => {
                 </div>
             </div>
             <div className="col col-lg-6 col-md-12">
-                <Image src={heroImg} alt="" className="hero__img" width={600} height={500}/>
+                <Image src={heroImg} alt="Illustration of online learning" className="hero__img" width={600} height={500}/>
             </div>
         </div>
     </section>
@@ -35,4 +31,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
